@@ -1,0 +1,14 @@
+.fragment_login {
+	width:100vw;
+	height:100vh;
+}
+
+.login_card
+{
+		width:80vw;
+		height:60vh!important;
+}
+.fullHeight
+{
+	height:100%!important;
+}

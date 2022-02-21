@@ -1,0 +1,45 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "animationType",
+                    "label": "Animation Type",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "animate__slideInDown","label":"Slide In Down"},
+													 {"value": "animate__slideInLeft","label":"Slide In Left"},
+													{"value": "animate__slideInRight","label":"Slide In Right"},
+													{"value": "animate__slideInUp","label":"Slide In Up"},
+                            	{"value": "animate__zoomIn","label":"Zoom In"},
+													{"value": "animate__zoomInDown","label":"Zoom In Down"},
+													{"value": "animate__zoomInLeft","label":"Zoom In Left"},
+													{"value": "animate__zoomInRight","label":"Zoom In Right"},
+													{"value": "animate__zoomInUp","label":"Zoom In Up"},
+                        ]
+                    },
+                    "defaultValue": "animate__slideInDown"
+                },
+							{
+                    "name": "shadow",
+                    "label": "Shadow",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "shadow-lg","label":"Shadow Large"},
+													 {"value": "shadow","label":"Shadow"},
+													{"value": " ","label":"None"}
+                        ]
+                    },
+                    "defaultValue": ""
+                }
+                
+            ]
+        }
+    ]
+}

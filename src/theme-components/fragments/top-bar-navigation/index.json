@@ -1,0 +1,73 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+							               {
+                    "name": "entranceAnimationType",
+                    "label": "Menu Entrance Animation Type",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+														{"value": "animate__rotateInUpLeft","label":"Rotate In Up Left"},
+                            {"value": "animate__slideInDown","label":"Slide In Down"},
+													 {"value": "animate__slideInLeft","label":"Slide In Left"},
+													{"value": "animate__slideInRight","label":"Slide In Right"},
+													{"value": "animate__slideInUp","label":"Slide In Up"},
+                            	{"value": "animate__zoomIn","label":"Zoom In"},
+													{"value": "animate__zoomInDown","label":"Zoom In Down"},
+													{"value": "animate__zoomInLeft","label":"Zoom In Left"},
+													{"value": "animate__zoomInRight","label":"Zoom In Right"},
+													{"value": "animate__zoomInUp","label":"Zoom In Up"},
+                        ]
+                    },
+                    "defaultValue": "animate__slideInDown"
+                },{
+                    "name": "exitAnimationType",
+                    "label": "Menu Exit Animation Type",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+													{"value": "animate__rotateOutUpLeft","label":"Rotate Out Up Left"},
+                            {"value": "animate__slideOutDown","label":"Slide Out Down"},
+													 {"value": "animate__slideOutLeft","label":"Slide Out Left"},
+													{"value": "animate__slideOutRight","label":"Slide Out Right"},
+													{"value": "animate__slideOutUp","label":"Slide Out Up"},
+                            	{"value": "animate__zoomOut","label":"Zoom Out"},
+													{"value": "animate__zoomOutDown","label":"Zoom Out Down"},
+													{"value": "animate__zoomOutLeft","label":"Zoom Out Left"},
+													{"value": "animate__zoomOutRight","label":"Zoom Out Right"},
+													{"value": "animate__zoomOutUp","label":"Zoom Out Up"},
+                        ]
+                    },
+                    "defaultValue": "animate__slideOutDown"
+                },
+							{
+                    "name": "navigationMenu",
+                    "label": "Navigation Menu ID",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "43042"
+                },
+							{
+                    "name": "navigationMenuTemplate",
+                    "label": "Navigation Menu Template ID",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "43025"
+                }
+                
+            ]
+        }
+    ]
+}

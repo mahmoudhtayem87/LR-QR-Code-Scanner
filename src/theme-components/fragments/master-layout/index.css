@@ -1,0 +1,47 @@
+.main_layout
+{
+	position:relative;
+}
+.side_menu
+{
+	max-width:20rem!important;
+}
+.h-100
+{
+	
+}
+.fixed-scroll
+{
+	overflow:hidden;
+	position:relative;
+}
+.main_topper
+{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+}
+
+.main_footer
+{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+}
+.page_content
+{
+	top:4.5rem;
+	position:absolute;
+	overflow:scroll;
+	height:100%;
+}
+.fullHeight
+{
+		height:100vh;
+}
+.HeightControlMenu
+{
+		height:calc(100vh - 56px) ;
+}

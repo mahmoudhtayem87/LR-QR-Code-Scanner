@@ -1,0 +1,14 @@
+[#assign uniqueId = .now?string["HHmmssSSS"]?number /]
+<div class="card m-3 ${configuration.shadow} animate__animated ${configuration.animationType}">
+                                <!-- Card Header - Accordion -->
+                                <a href="#card_${uniqueId}" class="d-block card-header py-3" data-toggle="collapse"
+                                    role="button" aria-expanded="true" aria-controls="card_${uniqueId}">
+                                    <h6 class="m-0 font-weight-bold text-primary"><lfr-editable id="title" type="text"></lfr-editable></h6>
+                                </a>
+                                <!-- Card Content - Collapse -->
+                                <div class="collapse show" id="card_${uniqueId}">
+                                    <div class="card-body">
+                                       <lfr-drop-zone></lfr-drop-zone>
+                                    </div>
+                                </div>
+                            </div>

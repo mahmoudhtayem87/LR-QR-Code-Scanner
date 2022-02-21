@@ -1,0 +1,15 @@
+<div class="fragment_14">
+    [#if themeDisplay.isSignedIn()]
+    <div class="alert alert-primary" role="alert">
+        Redirecting...
+    </div>
+	<script>
+		 if (window.location.search.indexOf("p_l_mode=edit") == -1 ) {
+                        	document.location=Liferay.ThemeDisplay.getURLHome();
+                    } else {
+                        console.log("Can not redirect while page is in edit mode");
+                    }
+
+	</script>
+    [/#if]
+</div>

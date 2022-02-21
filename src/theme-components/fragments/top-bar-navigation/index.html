@@ -1,0 +1,171 @@
+<script src="https://kit.fontawesome.com/470d30d8f5.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="/documents/39563/55861/hover-min.css/7d8203b0-26b7-55ec-034d-f4c21a70f887?t=1642532335757" />
+<script>
+function popup(url, title) {
+    //notificationsModal
+    $("#notificationsModalTitle").text(title);
+    $("#notificationsFrame").hide();
+    $('#notificationsModal').modal('show');
+    $("#notificationsFrame").attr('src', url);
+    $("#notificationsFrame").on("load", function() {
+        let head = $("#notificationsFrame").contents().find("head");
+        let css = `<style>
+        .lfr-product-menu-panel
+            {
+                display:none!important;
+            }
+        #wrapper
+            {
+                padding:0!important;
+            }
+        .control-menu-container
+            {
+                display:none!important;
+            }
+        </style>`;
+        $(head).append(css);
+
+    });
+    window.setTimeout(() => {
+        $("#notificationsFrame").show();
+    }, 1000); // 5 seconds
+
+}
+    function toggleMenu() {
+        if (document.getElementById("mainMenu").className.includes("hide")) {
+            document.getElementById("mainMenu").classList.remove("hide");
+            document.getElementById("mainMenu").classList.add("show");
+            document.getElementById("mainMenu").classList.remove("${configuration.exitAnimationType}");
+            document.getElementById("mainMenu").classList.add("${configuration.entranceAnimationType}");
+            document.getElementsByTagName("body")[0].classList.add("noScroll");
+
+        } else {
+            document.getElementById("mainMenu").classList.remove("${configuration.entranceAnimationType}");
+            document.getElementById("mainMenu").classList.add("${configuration.exitAnimationType}");
+            document.getElementsByTagName("body")[0].classList.remove("noScroll");
+            delay(1000).then(() => {
+                document.getElementById("mainMenu").classList.remove("show");
+                document.getElementById("mainMenu").classList.add("hide");
+            });
+
+
+        }
+
+    }
+    function openEvent(taskId, label) {
+        var p_p_state = "p_p_state=popup";
+        var notificationBaseUrl = Liferay.ThemeDisplay.getSiteAdminURL().replace("p_p_state=maximized", p_p_state) + "&";
+        var p_p_lifecycle = "p_p_lifecycle=0";
+        var p_p_id = "p_p_id=com_liferay_portal_workflow_task_web_portlet_MyWorkflowTaskPortlet";
+        var param1 = "_com_liferay_portal_workflow_task_web_portlet_MyWorkflowTaskPortlet_mvcPath=/edit_workflow_task.jsp";
+        var _taskId = "_com_liferay_portal_workflow_task_web_portlet_MyWorkflowTaskPortlet_workflowTaskId=";
+        var alertUrl = notificationBaseUrl + "?" +
+            p_p_lifecycle + "&" +
+            p_p_id + "&" +
+            //p_p_state + "&" +
+            param1 + "&" +
+            _taskId + taskId;
+        popup(alertUrl, label)
+    }
+
+</script>
+
+<script>
+    function openAllNotifications() {
+
+        var p_p_state = "p_p_state=popup";
+        var notificationBaseUrl = Liferay.ThemeDisplay.getSiteAdminURL().replace("p_p_state=maximized", p_p_state) + "&";
+        var p_p_lifecycle = "p_p_lifecycle=0";
+        var p_p_id = "p_p_id=com_liferay_notifications_web_portlet_NotificationsPortlet";
+        var p_auth = "p_auth=" + Liferay.authToken;
+        var url = notificationBaseUrl + p_p_lifecycle + "&" + p_p_id + "&" + p_auth;
+        popup(url, "Notifications");
+    }
+</script>
+<div class="topBar shadow-lg">
+    <!-- Topbar -->
+    <nav class="navbar navbar-expand navbar-light bg-white topbar static-top  d-flex">
+
+        <!-- Sidebar Toggle (Topbar) -->
+        <span class="mx-4">
+            <img src="${themeDisplay.getCompanyLogo()}" style="max-height:75px" />
+        </span>
+        <div id="mainMenu" class="hide animate__animated bg-gradient-primary">
+            <!-- Sidebar Toggle (Topbar) -->
+            <div class="flex-container p-4">
+                <div style="flex-grow: 0" class="mx-1">
+                    <button class="btn megaMenuToggle" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div style="flex-grow: 8" class="d-flex">
+                    <h1 class="mx-4 my-auto text-white">
+                        ${company.name}
+                    </h1>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Topbar Search -->
+        <span class="mx-2 flex-grow-1">
+					[#attempt]
+            [#assign navMenuID = configuration.navigationMenu?number]
+            [#assign templateId = configuration.navigationMenuTemplate?number]
+            [#assign ddmTemplateLocalService =
+            serviceLocator.findService("com.liferay.dynamic.data.mapping.service.DDMTemplateLocalService")]
+            [#assign template = ddmTemplateLocalService.fetchDDMTemplate(templateId)]
+            [#assign siteNavigationMenuLocalService =
+            serviceLocator.findService("com.liferay.site.navigation.service.SiteNavigationMenuLocalService")]
+            [#assign navigationMenu = siteNavigationMenuLocalService.fetchSiteNavigationMenu(navMenuID)]
+            [@liferay_site_navigation["navigation-menu"]
+            ddmTemplateGroupId=template.groupId
+            ddmTemplateKey=template.templateKey
+            displayDepth=1
+            expandedLevels="auto"
+            rootItemType="absolute"
+            rootItemLevel=0
+            siteNavigationMenuId=navigationMenu.siteNavigationMenuId /]
+						[#recover]
+					<small>Menu is temporarily unavailable.</small>
+            [/#attempt]
+        </span>
+        <!-- Topbar Navbar -->
+        <ul class="navbar-nav ml-auto mx-4">
+            <li class="nav-item dropdown no-arrow mx-2">
+                [@liferay.search_bar /]
+            </li>
+            <li class="nav-item dropdown no-arrow mx-2">
+                [@liferay.languages /]
+            </li>
+            <!-- Nav Item - User Information -->
+            <li class="nav-item dropdown no-arrow">
+                [@liferay.user_personal_bar /]
+            </li>
+
+        </ul>
+
+    </nav>
+</div>
+
+<script>
+$(document).ready(function(){
+$(".mini-compare>a").attr("href","/compare")
+});
+</script>
+
+<!-- Modal -->
+<div class="modal fade no-display " id="notificationsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="notificationsModalTitle"></h4>
+      </div>
+      <div class="modal-body p-0">
+        <iframe id="notificationsFrame" class="h-100 w-100" src="your url"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

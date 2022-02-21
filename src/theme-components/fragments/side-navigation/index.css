@@ -1,0 +1,14 @@
+.fragment_106 {
+}
+.sidebar .nav-link
+{
+	width:100%!important;
+}
+.sidebar.accordion
+{
+	z-index:3!important;
+}
+.text_shadow
+{
+	text-shadow: 1px 1px var(--secondary);
+}

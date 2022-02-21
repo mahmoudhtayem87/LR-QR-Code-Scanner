@@ -1,0 +1,31 @@
+.fragment_108 {
+}
+.main-container
+{
+	height:100vh;
+	position:relative;
+}
+.fixed-header
+{
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+}
+.fixed-footer
+{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+}
+.content-box
+{
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:0;
+	top:5.4rem;
+	overflow:scroll;
+	height:85%;
+}

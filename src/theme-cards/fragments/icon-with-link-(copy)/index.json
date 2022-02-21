@@ -1,0 +1,93 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "cardIcon",
+                    "label": "Font Awesome Icon",
+                    "description": "fas fa-star",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": "Placeholder"
+                    },
+                    "dataType": "string",
+                    "defaultValue": "fas fa-star"
+                },
+							               {
+                    "name": "animationType",
+                    "label": "Animation Type",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "animate__slideInDown","label":"Slide In Down"},
+													 {"value": "animate__slideInLeft","label":"Slide In Left"},
+													{"value": "animate__slideInRight","label":"Slide In Right"},
+													{"value": "animate__slideInUp","label":"Slide In Up"},
+                            	{"value": "animate__zoomIn","label":"Zoom In"},
+													{"value": "animate__zoomInDown","label":"Zoom In Down"},
+													{"value": "animate__zoomInLeft","label":"Zoom In Left"},
+													{"value": "animate__zoomInRight","label":"Zoom In Right"},
+													{"value": "animate__zoomInUp","label":"Zoom In Up"},
+                        ]
+                    },
+                    "defaultValue": "animate__slideInDown"
+                },
+							{
+                    "name": "borderPlacment",
+                    "label": "Border Placement",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "bottom","label":"Bottom"},
+													 {"value": "left","label":"Left"},
+													 {"value": "right","label":"Right"},
+												
+                        ]
+                    },
+                    "defaultValue": "left"
+                },
+							{
+                    "name": "borderColor",
+                    "label": "Animation Type",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"label": "Primary","value":"primary"},
+													 {"label": "Secondary","value":"secondary"},
+													 {"label": "Danger","value":"danger"},
+													 {"label": "Information","value":"info"},
+													 {"label": "Success","value":"success"},
+													 {"label": "Dark","value":"dark"},
+													{"label": "Warning","value":"warning"}
+													
+												
+                        ]
+                    },
+                    "defaultValue": "primary"
+                },
+							{
+                    "name": "shadow",
+                    "label": "Shadow",
+                    "description": "",
+                    "type": "select",
+                    "dataType": "string",
+                    "typeOptions": {
+                        "validValues": [
+                            {"value": "shadow-lg","label":"Shadow Larg"},
+													 {"value": "shadow","label":"Shadow"},
+													{"value": "none","label":"None"}
+                        ]
+                    },
+                    "defaultValue": "shadow-lg"
+                }
+                
+            ]
+        }
+    ]
+}

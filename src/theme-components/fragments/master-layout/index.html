@@ -1,0 +1,36 @@
+<div class="d-flex flex-row main_layout " id="main_layout_container">
+	<div class="d-flex flex-column flex-fill h-100 fixed-scroll">
+		<div class="d-flex">
+			<div class="main_topper"> 
+			<lfr-drop-zone></lfr-drop-zone>
+		</div>
+		<div class="page_content w-100 h-100">
+			<div class="container-fluid p-4">
+						<lfr-drop-zone></lfr-drop-zone>
+			</div>
+		</div>
+	
+		</div>
+		
+		
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+if($(".control-menu-container")[0])
+{
+	$("#main_layout_container").removeClass("HeightControlMenu");
+	$("#main_layout_container").removeClass("fullHeight");
+	
+	$("#main_layout_container").addClass("HeightControlMenu");
+}else
+	{
+	$("#main_layout_container").removeClass("HeightControlMenu");
+	$("#main_layout_container").removeClass("fullHeight");
+	
+	$("#main_layout_container").addClass("fullHeight");
+}
+});
+    
+</script>

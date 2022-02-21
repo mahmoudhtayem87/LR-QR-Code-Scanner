@@ -1,0 +1,29 @@
+.service_card {
+}
+
+.box-part img
+{
+	max-height:80px!important;
+}
+.service_card  a{
+  text-decoration:none; 
+  color: #0062cc;
+  border-bottom:2px solid #0062cc;
+}
+.service_card  .box{
+    padding:60px 0px;
+}
+
+.service_card  .box-part{
+    background:#FFF;
+    border-radius:0;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.service_card  .text{
+    margin:20px 0px;
+}
+
+.service_card  .fa{
+     color:#4183D7;
+}

@@ -1,0 +1,19 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "redirectionUrl",
+                    "label": "Redirection Url",
+                    "description": "button-text",
+                    "type": "text",
+                    "typeOptions": {
+                        "placeholder": ""
+                    },
+                    "dataType": "string",
+                    "defaultValue": ""
+                }
+            ]
+        }
+    ]
+}
