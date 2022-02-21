@@ -1,14 +1,31 @@
 {
   "fieldSets": [
-    {
-      "fields": [
-        {
-          "dataType": "object",
-          "label": "text-color",
-          "name": "textColor",
-          "type": "colorPalette"
-        }
-      ]
-    }
+      {
+          "fields": [
+              {
+                  "name": "channelId",
+                  "label": "Channel ID",
+                  "description": "button-text",
+                  "type": "text",
+                  "typeOptions": {
+                      "placeholder": "Placeholder"
+                  },
+                  "dataType": "string",
+                  "defaultValue": "43434"
+              },
+            {
+                  "name": "currencyCode",
+                  "label": "Currency Code",
+                  "description": "button-text",
+                  "type": "text",
+                  "typeOptions": {
+                      "placeholder": "Placeholder"
+                  },
+                  "dataType": "string",
+                  "defaultValue": "SAR"
+              }
+              
+          ]
+      }
   ]
 }
