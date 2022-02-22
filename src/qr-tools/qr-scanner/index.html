@@ -146,11 +146,12 @@
           loadCarts();
       });
   }
- function addToCart(productId) {
+ function addToCart(skuId) {
       let contentType = 'application/json';
       let data = {
           "quantity": "1",
-          "skuId": productId
+          "skuId": skuId,
+          options: "[]"
       };
       let method = 'POST';
 
