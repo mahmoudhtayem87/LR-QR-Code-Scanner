@@ -2,9 +2,8 @@
   <div class="autofit-row">
     <div class="autofit-col autofit-col-expand">
       <div class="form-group">
-        <label for="accounts">Select Account</label>
+        <label for="accounts" data-lfr-editable-id="Select-Account" data-lfr-editable-type="text">Select Account</label>
         <select class="form-control" id="accounts" onchange="loadCarts()">
-
         </select>
       </div>
     </div>
@@ -12,9 +11,8 @@
   <div class="autofit-row">
     <div class="autofit-col autofit-col-expand">
       <div class="form-group">
-        <label for="accounts">Select Cart</label>
+        <label for="accounts" data-lfr-editable-id="Select-Cart" data-lfr-editable-type="text">Select Cart</label>
         <select class="form-control" id="carts">
-
         </select>
       </div>
     </div>
@@ -22,28 +20,26 @@
   <div class="autofit-row">
     <div class="autofit-col autofit-col-expand">
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button id="start-button" class="btn btn-primary">Scan</button>
-        <button id="stop-button" class="btn btn-danger">Stop</button>
+        <button id="start-button" class="btn btn-primary"><span data-lfr-editable-id="btn-scan" data-lfr-editable-type="text">Scan</span></button>
+        <button id="stop-button" class="btn btn-danger"><span data-lfr-editable-id="btn-stop" data-lfr-editable-type="text">Stop</span></button>
       </div>
     </div>
-
   </div>
   <div class="autofit-row">
     <div class="autofit-col autofit-col-expand">
-      <b>Detected QR code: </b>
+      <strong data-lfr-editable-id="detected-code" data-lfr-editable-type="text">Detected QR code: </strong>
       <span id="cam-qr-result">None</span>
       <br>
-      <b>Last detected at: </b>
+      <strong data-lfr-editable-id="detected-code-date-time" data-lfr-editable-type="text">Last detected at: </strong>
       <span id="cam-qr-result-timestamp"></span>
       <br>
       <div id="video-container" class="d-none">
-        <h3>Scan Your QR Here</h3>
+        <h3 data-lfr-editable-id="scan-your-qr-label" data-lfr-editable-type="text">Scan Your QR Here</h3>
         <video id="qr-video" style="width: 100%!important;"></video>
       </div>
     </div>
   </div>
 </div>
-
 <script>
   function clearSelectOptions(id) {
     var selectobject = document.getElementById(id);
