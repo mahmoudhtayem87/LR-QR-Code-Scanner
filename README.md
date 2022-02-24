@@ -1,12 +1,7 @@
-# QRCodeScanner
+# Commerce QR Code Scanner
 
-This project has been created with [generator-liferay-fragments][1]. You can read
-how to manage this project in the [generator documentation][2].
+Simple QR Scanner which reads the QR Code, The QR Code should be SKU ID for a product which need to be added to the cart.
 
-> ⚠ Some of the generated fragments might not be compatible with every Liferay
-> portal version, please check the [fragment's generator documentation][3] or
-> your Liferay documentation to be sure you can use them.
+This feature has been developed using simple fragment as an example of how we can use commerce headless.
 
-[1]: https://www.npmjs.com/package/generator-liferay-fragments
-[2]: https://www.npmjs.com/package/generator-liferay-fragments#usage
-[3]: https://www.npmjs.com/package/generator-liferay-fragments#creating-new-fragments
+The fragment has been developed with configuration which will allow you to specify the channel id and the currency code, the fragment will start by querying the available accounts for the signed in user, once the account is selected a list of open cart will be available to select from, if there is no open cart, the fragment will create one on the fly.
